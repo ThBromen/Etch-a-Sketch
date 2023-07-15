@@ -27,11 +27,10 @@ createButton.addEventListener("click", function () {
 
     gridContainer.innerHTML = gridHTML;
   }
-  if (gridSize<100){
+  if (gridSize < 100) {
     createGrid();
-  }  
-  else{
-    document.write("wrong input");
+  } else {
+    alert("wrong input");
   }
   // Event listeners for drawing functionality
   gridContainer.addEventListener("mousedown", startDrawing);
@@ -76,5 +75,4 @@ createButton.addEventListener("click", function () {
     const b = Math.floor(Math.random() * 256);
     return `rgb(${r}, ${g}, ${b})`;
   }
- 
-  });
+});
