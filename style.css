@@ -1,0 +1,20 @@
+.draw {
+  border: 5px blueviolet;
+  align-items: center;
+  align-content: center;
+}
+
+/* Define the size and appearance of the grid divs */
+.grid {
+  display: grid;
+  gap: 1px;
+  width: 400px;
+  height: 400px;
+  background-color: #ccc;
+  align-content: center;
+}
+
+/* Style the individual squares */
+.grid div {
+  background-color: #fff;
+}
