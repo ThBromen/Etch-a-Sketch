@@ -1,20 +1,44 @@
-.draw {
-  border: 5px blueviolet;
-  align-items: center;
-  align-content: center;
+body {
+  /* margin-left: 450px; */
+  background-color: beige;
 }
-
-/* Define the size and appearance of the grid divs */
+h1 {
+}
+.container {
+  position: absolute;
+  left: 30%;
+  background-color: bisque;
+  border: 5px solid rgb(47, 48, 53);
+}
+.container h1 {
+  margin-left: 120px;
+}
+.container button{
+  background-color: #e9e626;
+  height: 50px;
+  width: 100px;
+}
+.container button:hover{
+  background-color: aquamarine;
+}
+.container input{
+  height: 40px;
+  width: 130px;
+}
 .grid {
+  margin-top: 50px;
+  border: 4px solid rgb(75, 65, 65);
   display: grid;
   gap: 1px;
-  width: 400px;
-  height: 400px;
-  background-color: #ccc;
-  align-content: center;
+  width: 600px;
+  height: 600px;
+  background-color: #77528b;
 }
 
-/* Style the individual squares */
 .grid div {
-  background-color: #fff;
+  background-color: #61cc58;
+  transition: background-color 0.3s ease;
+}
+.grid div:hover {
+  background-color: #000;
 }

@@ -27,8 +27,13 @@ createButton.addEventListener("click", function () {
 
     gridContainer.innerHTML = gridHTML;
   }
-
-  createGrid(); // Event listeners for drawing functionality
+  if (gridSize<100){
+    createGrid();
+  }  
+  else{
+    document.write("wrong input");
+  }
+  // Event listeners for drawing functionality
   gridContainer.addEventListener("mousedown", startDrawing);
   gridContainer.addEventListener("mouseup", stopDrawing);
   gridContainer.addEventListener("mouseleave", stopDrawing);
@@ -52,14 +57,24 @@ createButton.addEventListener("click", function () {
 
   // Button event listener for switching between drawing and erasing modes
   const drawButton = document.querySelector("#drawButton");
+  const drawRgbButton = document.querySelector("#drawRgbButton");
 
   drawButton.addEventListener("click", function () {
-    if (drawButton.textContent === "Draw") {
-      drawButton.textContent = "Erase";
-      drawColor = "#fff"; // Change to white for erasing mode
-    } else {
-      drawButton.textContent = "Draw";
-      drawColor = "#000"; // Change to black for drawing mode
-    }
+    drawButton.textContent = "Draw (Black)";
+    drawColor = "#000"; // Change to black for drawing mode
   });
-});
+
+  drawRgbButton.addEventListener("click", function () {
+    drawButton.textContent = "Draw (RGB)";
+    drawColor = getRandomColor(); // Change to random RGB color for drawing mode
+  });
+
+  // Helper function to generate random RGB color
+  function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+ 
+  });
